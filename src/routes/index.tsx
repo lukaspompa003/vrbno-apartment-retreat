@@ -90,7 +90,15 @@ function Index() {
         </div>
       </section>
 
+      <section className="mx-auto max-w-2xl px-6 py-20 text-center">
+        <p className="text-lg leading-relaxed text-muted-foreground">
+          Útulný apartmán ve Vrbně pod Pradědem s výhledem na hory. K dispozici je terasa, Wi-Fi a parkování zdarma,
+          plně vybavená kuchyň a koupelna se sprchou.
+        </p>
+      </section>
+
       <section className="mx-auto max-w-2xl px-6 pb-16">
+
         <h2 className="mb-8 text-center text-3xl">V okolí</h2>
         <ul className="space-y-3">
           {nearby.map((n) => (
