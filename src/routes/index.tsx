@@ -2,9 +2,14 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { ChevronLeft, ChevronRight, Mail, Phone, MapPin } from "lucide-react";
 import hero from "@/assets/relax-hero.jpeg.asset.json";
-import kitchen from "@/assets/kitchen.jpg";
 import bathroom from "@/assets/bathroom.jpg";
 import exterior from "@/assets/exterior.jpg";
+import kitchen1 from "@/assets/IMG_0894.jpeg.asset.json";
+import kitchen2 from "@/assets/IMG_0895.jpeg.asset.json";
+import kitchen3 from "@/assets/IMG_0896.jpeg.asset.json";
+import kitchen4 from "@/assets/IMG_0897.jpeg.asset.json";
+import kitchen5 from "@/assets/IMG_0898.jpeg.asset.json";
+import kitchen6 from "@/assets/IMG_0899.jpeg.asset.json";
 import living1 from "@/assets/IMG_0890.jpeg.asset.json";
 import living2 from "@/assets/IMG_0891.jpeg.asset.json";
 import living3 from "@/assets/IMG_0892.jpeg.asset.json";
@@ -29,10 +34,14 @@ const sections = [
   {
     title: "Obývací pokoj s postelí",
     photos: [hero.url, living1.url, living2.url, living5.url, living4.url, living3.url],
-    items: ["Manželská postel", "Jídelní stůl", "Wi-Fi zdarma"],
+    items: ["Manželská postel", "Pohovka", "Jídelní stůl", "Wi-Fi zdarma"],
+  },
+  {
+    title: "Kuchyň",
+    photos: [kitchen1.url, kitchen2.url, kitchen3.url, kitchen4.url, kitchen5.url, kitchen6.url],
+    items: ["Lednička s mrazákem", "Myčka nádobí", "Varná deska", "Mikrovlnná trouba"],
   },
   { title: "Koupelna", photos: [bathroom], items: ["Prostorný sprchový kout", "Toaleta", "Pračka"] },
-  { title: "Kuchyň", photos: [kitchen], items: ["Lednička s mrazákem", "Myčka nádobí", "Varná deska", "Mikrovlnná trouba"] },
   { title: "Terasa a vchod", photos: [exterior], items: ["Posezení", "Soukromé parkoviště zdarma", "Výhled na hory"] },
   { title: "Venku", photos: [] as string[], items: [] as string[] },
 ];
