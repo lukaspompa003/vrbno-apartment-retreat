@@ -22,7 +22,7 @@ export const Route = createFileRoute("/")({
 });
 
 // Placeholder photos — replace with real ones (10 per section).
-const fill = (imgs: string[]) => Array.from({ length: 10 }, (_, i) => imgs[i % imgs.length]);
+const fill = (imgs: string[]): string[] => Array.from({ length: 10 }, (_, i) => imgs[i % imgs.length] as string);
 
 const sections = [
   { title: "Obývací pokoj s postelí", photos: fill([hero.url]), items: ["Manželská postel", "Rozkládací pohovka", "TV s plochou obrazovkou", "Jídelní stůl", "Skříň / šatna", "Wi-Fi zdarma"] },
