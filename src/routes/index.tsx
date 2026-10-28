@@ -29,14 +29,21 @@ const sections = [
   {
     title: "Obývací pokoj s postelí",
     photos: [hero.url, living1.url, living2.url, living5.url, living4.url, living3.url],
-    items: ["Manželská postel", "Rozkládací pohovka", "Jídelní stůl", "Wi-Fi zdarma"],
+    items: ["Manželská postel", "Jídelní stůl", "Wi-Fi zdarma"],
   },
-  { title: "Koupelna", photos: [bathroom], items: ["Prostorný sprchový kout", "Toaleta", "Ručníky", "Toaletní potřeby zdarma", "Fén", "Pračka"] },
+  { title: "Koupelna", photos: [bathroom], items: ["Prostorný sprchový kout", "Toaleta", "Pračka"] },
   { title: "Kuchyň", photos: [kitchen], items: ["Lednička s mrazákem", "Myčka nádobí", "Varná deska", "Mikrovlnná trouba"] },
-  { title: "Vchod / chodba", photos: [] as string[], items: [] as string[] },
-  { title: "Terasa", photos: [exterior], items: ["Soukromé parkoviště zdarma", "Výhled na hory"] },
+  { title: "Terasa a vchod", photos: [exterior], items: ["Sezení", "Soukromé parkoviště zdarma", "Výhled na hory"] },
   { title: "Venku", photos: [] as string[], items: [] as string[] },
 ];
+
+const nearby = [
+  { place: "Karlova Studánka – lázně", dist: "11 km autem" },
+  { place: "Lyžařský areál Kopřivná", dist: "17 km autem" },
+  { place: "Praděd", dist: "19 km autem" },
+  { place: "Termály Velké Losiny", dist: "60 km, hodina cesty" },
+];
+
 
 
 const prices = [
@@ -83,12 +90,18 @@ function Index() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-2xl px-6 py-20 text-center">
-        <p className="text-lg leading-relaxed text-muted-foreground">
-          Útulný apartmán ve Vrbně pod Pradědem s výhledem na hory. K dispozici je terasa, Wi-Fi a parkování zdarma,
-          plně vybavená kuchyň a koupelna se sprchou.
-        </p>
+      <section className="mx-auto max-w-2xl px-6 pb-16">
+        <h2 className="mb-8 text-center text-3xl">V okolí</h2>
+        <ul className="space-y-3">
+          {nearby.map((n) => (
+            <li key={n.place} className="flex items-baseline justify-between gap-4 border-b border-border pb-3">
+              <span>{n.place}</span>
+              <span className="shrink-0 text-sm text-muted-foreground">{n.dist}</span>
+            </li>
+          ))}
+        </ul>
       </section>
+
 
 
       <div className="mx-auto max-w-4xl space-y-24 px-6 py-20">
