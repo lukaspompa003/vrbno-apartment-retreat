@@ -90,23 +90,9 @@ function Index() {
         </p>
       </section>
 
-      <section className="bg-secondary px-6 py-20">
-        <div className="mx-auto max-w-4xl">
-          <h2 className="mb-10 text-center text-4xl">V okolí</h2>
-          <div className="grid grid-cols-2 gap-6 md:grid-cols-4">
-            {nearby.map((n) => (
-              <div key={n.name} className="text-center">
-                <div className="font-display text-4xl text-primary">{n.km}</div>
-                <div className="mt-2 font-medium">{n.name}</div>
-                <div className="text-sm text-muted-foreground">{n.note}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       <div className="mx-auto max-w-4xl space-y-24 px-6 py-20">
-        {sections.map((s) => (
+        {sections.filter((s) => s.photos.length > 0).map((s) => (
           <section key={s.title}>
             <h2 className="mb-6 text-4xl">{s.title}</h2>
             <Gallery photos={s.photos} title={s.title} />
