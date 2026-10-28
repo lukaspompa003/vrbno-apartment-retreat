@@ -6,6 +6,11 @@ import kitchen from "@/assets/kitchen.jpg";
 import bathroom from "@/assets/bathroom.jpg";
 import exterior from "@/assets/exterior.jpg";
 import surroundings from "@/assets/surroundings.jpg";
+import living1 from "@/assets/IMG_0890.jpeg.asset.json";
+import living2 from "@/assets/IMG_0891.jpeg.asset.json";
+import living3 from "@/assets/IMG_0892.jpeg.asset.json";
+import living4 from "@/assets/IMG_0893.jpeg.asset.json";
+import living5 from "@/assets/IMG_0889.jpeg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
