@@ -29,7 +29,7 @@ const sections = [
   { title: "Kuchyň", photos: fill([kitchen]), items: ["Lednička s mrazákem", "Myčka nádobí", "Varná deska", "Mikrovlnná trouba"] },
   { title: "Koupelna", photos: fill([bathroom]), items: ["Prostorný sprchový kout", "Toaleta", "Ručníky", "Toaletní potřeby zdarma", "Fén", "Pračka"] },
   { title: "Venku", photos: fill([exterior]), items: ["Terasa", "Soukromé parkoviště zdarma", "Výhled na hory"] },
-  { title: "Okolí", photos: fill([surroundings]), items: ["Praděd", "Karlova Studánka", "Kopřivná", "Velké Losiny"] },
+  { title: "Okolí", photos: fill([surroundings]), items: [] },
 ];
 
 const nearby = [
@@ -110,11 +110,13 @@ function Index() {
           <section key={s.title}>
             <h2 className="mb-6 text-4xl">{s.title}</h2>
             <Gallery photos={s.photos} title={s.title} />
-            <ul className="mt-6 flex flex-wrap gap-2">
-              {s.items.map((it) => (
-                <li key={it} className="rounded-full border border-border px-4 py-1.5 text-sm">{it}</li>
-              ))}
-            </ul>
+            {s.items.length > 0 && (
+              <ul className="mt-6 flex flex-wrap gap-2">
+                {s.items.map((it) => (
+                  <li key={it} className="rounded-full border border-border px-4 py-1.5 text-sm">{it}</li>
+                ))}
+              </ul>
+            )}
           </section>
         ))}
       </div>
