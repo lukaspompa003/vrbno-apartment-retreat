@@ -6,6 +6,11 @@ import kitchen from "@/assets/kitchen.jpg";
 import bathroom from "@/assets/bathroom.jpg";
 import exterior from "@/assets/exterior.jpg";
 import surroundings from "@/assets/surroundings.jpg";
+import living1 from "@/assets/IMG_0890.jpeg.asset.json";
+import living2 from "@/assets/IMG_0891.jpeg.asset.json";
+import living3 from "@/assets/IMG_0892.jpeg.asset.json";
+import living4 from "@/assets/IMG_0893.jpeg.asset.json";
+import living5 from "@/assets/IMG_0889.jpeg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -21,15 +26,16 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-// Placeholder photos — replace with real ones (10 per section).
-const fill = (imgs: string[]): string[] => Array.from({ length: 10 }, (_, i) => imgs[i % imgs.length] as string);
-
 const sections = [
-  { title: "Obývací pokoj s postelí", photos: fill([hero.url]), items: ["Manželská postel", "Rozkládací pohovka", "TV s plochou obrazovkou", "Jídelní stůl", "Skříň / šatna", "Wi-Fi zdarma"] },
-  { title: "Kuchyň", photos: fill([kitchen]), items: ["Lednička s mrazákem", "Myčka nádobí", "Varná deska", "Mikrovlnná trouba"] },
-  { title: "Koupelna", photos: fill([bathroom]), items: ["Prostorný sprchový kout", "Toaleta", "Ručníky", "Toaletní potřeby zdarma", "Fén", "Pračka"] },
-  { title: "Venku", photos: fill([exterior]), items: ["Terasa", "Soukromé parkoviště zdarma", "Výhled na hory"] },
-  { title: "Okolí", photos: fill([surroundings]), items: [] },
+  {
+    title: "Obývací pokoj s postelí",
+    photos: [hero.url, living1.url, living2.url, living5.url, living4.url, living3.url],
+    items: ["Manželská postel", "Rozkládací pohovka", "TV s plochou obrazovkou", "Jídelní stůl", "Skříň / šatna", "Wi-Fi zdarma"],
+  },
+  { title: "Kuchyň", photos: [kitchen], items: ["Lednička s mrazákem", "Myčka nádobí", "Varná deska", "Mikrovlnná trouba"] },
+  { title: "Koupelna", photos: [bathroom], items: ["Prostorný sprchový kout", "Toaleta", "Ručníky", "Toaletní potřeby zdarma", "Fén", "Pračka"] },
+  { title: "Venku", photos: [exterior], items: ["Terasa", "Soukromé parkoviště zdarma", "Výhled na hory"] },
+  { title: "Okolí", photos: [surroundings], items: [] },
 ];
 
 const nearby = [
