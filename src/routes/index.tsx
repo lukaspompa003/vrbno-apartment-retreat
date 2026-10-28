@@ -5,7 +5,6 @@ import hero from "@/assets/relax-hero.jpeg.asset.json";
 import kitchen from "@/assets/kitchen.jpg";
 import bathroom from "@/assets/bathroom.jpg";
 import exterior from "@/assets/exterior.jpg";
-import surroundings from "@/assets/surroundings.jpg";
 import living1 from "@/assets/IMG_0890.jpeg.asset.json";
 import living2 from "@/assets/IMG_0891.jpeg.asset.json";
 import living3 from "@/assets/IMG_0892.jpeg.asset.json";
@@ -30,20 +29,15 @@ const sections = [
   {
     title: "Obývací pokoj s postelí",
     photos: [hero.url, living1.url, living2.url, living5.url, living4.url, living3.url],
-    items: ["Manželská postel", "Rozkládací pohovka", "TV s plochou obrazovkou", "Jídelní stůl", "Skříň / šatna", "Wi-Fi zdarma"],
+    items: ["Manželská postel", "Rozkládací pohovka", "Jídelní stůl", "Wi-Fi zdarma"],
   },
-  { title: "Kuchyň", photos: [kitchen], items: ["Lednička s mrazákem", "Myčka nádobí", "Varná deska", "Mikrovlnná trouba"] },
   { title: "Koupelna", photos: [bathroom], items: ["Prostorný sprchový kout", "Toaleta", "Ručníky", "Toaletní potřeby zdarma", "Fén", "Pračka"] },
-  { title: "Venku", photos: [exterior], items: ["Terasa", "Soukromé parkoviště zdarma", "Výhled na hory"] },
-  { title: "Okolí", photos: [surroundings], items: [] },
+  { title: "Kuchyň", photos: [kitchen], items: ["Lednička s mrazákem", "Myčka nádobí", "Varná deska", "Mikrovlnná trouba"] },
+  { title: "Vchod / chodba", photos: [] as string[], items: [] as string[] },
+  { title: "Terasa", photos: [exterior], items: ["Soukromé parkoviště zdarma", "Výhled na hory"] },
+  { title: "Venku", photos: [] as string[], items: [] as string[] },
 ];
 
-const nearby = [
-  { km: "11 km", name: "Karlova Studánka", note: "lázně" },
-  { km: "17 km", name: "Kopřivná", note: "lyžařský areál" },
-  { km: "19 km", name: "Praděd", note: "nejvyšší hora Moravy" },
-  { km: "60 km", name: "Termály Velké Losiny", note: "cca hodina autem" },
-];
 
 const prices = [
   { season: "Léto", price: "1 900 Kč" },
@@ -96,23 +90,9 @@ function Index() {
         </p>
       </section>
 
-      <section className="bg-secondary px-6 py-20">
-        <div className="mx-auto max-w-4xl">
-          <h2 className="mb-10 text-center text-4xl">V okolí</h2>
-          <div className="grid grid-cols-2 gap-6 md:grid-cols-4">
-            {nearby.map((n) => (
-              <div key={n.name} className="text-center">
-                <div className="font-display text-4xl text-primary">{n.km}</div>
-                <div className="mt-2 font-medium">{n.name}</div>
-                <div className="text-sm text-muted-foreground">{n.note}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       <div className="mx-auto max-w-4xl space-y-24 px-6 py-20">
-        {sections.map((s) => (
+        {sections.filter((s) => s.photos.length > 0).map((s) => (
           <section key={s.title}>
             <h2 className="mb-6 text-4xl">{s.title}</h2>
             <Gallery photos={s.photos} title={s.title} />
