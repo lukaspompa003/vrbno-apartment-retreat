@@ -33,16 +33,17 @@ const sections = [
   },
   { title: "Koupelna", photos: [bathroom], items: ["Prostorný sprchový kout", "Toaleta", "Pračka"] },
   { title: "Kuchyň", photos: [kitchen], items: ["Lednička s mrazákem", "Myčka nádobí", "Varná deska", "Mikrovlnná trouba"] },
-  { title: "Terasa a vchod", photos: [exterior], items: ["Sezení", "Soukromé parkoviště zdarma", "Výhled na hory"] },
+  { title: "Terasa a vchod", photos: [exterior], items: ["Posezení", "Soukromé parkoviště zdarma", "Výhled na hory"] },
   { title: "Venku", photos: [] as string[], items: [] as string[] },
 ];
 
 const nearby = [
-  { place: "Karlova Studánka – lázně", dist: "11 km autem" },
-  { place: "Lyžařský areál Kopřivná", dist: "17 km autem" },
-  { place: "Praděd", dist: "19 km autem" },
-  { place: "Termály Velké Losiny", dist: "60 km, hodina cesty" },
+  { km: "11 km", name: "Karlova Studánka", note: "lázně" },
+  { km: "17 km", name: "Kopřivná", note: "lyžařský areál" },
+  { km: "19 km", name: "Praděd", note: "nejvyšší hora Moravy" },
+  { km: "60 km", name: "Termály Velké Losiny", note: "cca hodina autem" },
 ];
+
 
 
 
@@ -97,18 +98,21 @@ function Index() {
         </p>
       </section>
 
-      <section className="mx-auto max-w-2xl px-6 pb-16">
-
-        <h2 className="mb-8 text-center text-3xl">V okolí</h2>
-        <ul className="space-y-3">
-          {nearby.map((n) => (
-            <li key={n.place} className="flex items-baseline justify-between gap-4 border-b border-border pb-3">
-              <span>{n.place}</span>
-              <span className="shrink-0 text-sm text-muted-foreground">{n.dist}</span>
-            </li>
-          ))}
-        </ul>
+      <section className="bg-secondary px-6 py-20">
+        <div className="mx-auto max-w-4xl">
+          <h2 className="mb-10 text-center text-4xl">V okolí</h2>
+          <div className="grid grid-cols-2 gap-6 md:grid-cols-4">
+            {nearby.map((n) => (
+              <div key={n.name} className="text-center">
+                <div className="font-display text-4xl text-primary">{n.km}</div>
+                <div className="mt-2 font-medium">{n.name}</div>
+                <div className="text-sm text-muted-foreground">{n.note}</div>
+              </div>
+            ))}
+          </div>
+        </div>
       </section>
+
 
 
 
