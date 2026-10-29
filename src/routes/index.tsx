@@ -48,10 +48,10 @@ const sections = [
   {
     title: "Kuchyň",
     photos: [kitchen1.url, kitchen2.url, kitchen3.url, kitchen4.url, kitchen5.url, kitchen6.url],
-    items: ["Lednička s mrazákem", "Myčka nádobí", "Varná deska", "Mikrovlnná trouba"],
+    items: ["Myčka nádobí", "Varná deska", "Mikrovlnná trouba"],
   },
   { title: "Koupelna", photos: [bath1.url, bath2.url, bath3.url, bath4.url, bath5.url, bath6.url], items: ["Prostorný sprchový kout", "Toaleta", "Pračka"] },
-  { title: "Terasa a vchod", photos: [terrace1.url, terrace2.url, terrace3.url, terrace4.url, terrace5.url], items: ["Posezení", "Výhled na hory"] },
+  { title: "Terasa a vchod", photos: [terrace1.url, terrace2.url, terrace3.url, terrace4.url, terrace5.url], items: ["Posezení", "Výhled na hory", "Lednice s mrazákem", "Úložný prostor"] },
   { title: "Venku", photos: [] as string[], items: [] as string[] },
 ];
 
