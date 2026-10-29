@@ -8,7 +8,11 @@ import bath3 from "@/assets/IMG_0905.jpeg.asset.json";
 import bath4 from "@/assets/IMG_0904.jpeg.asset.json";
 import bath5 from "@/assets/IMG_0906.jpeg.asset.json";
 import bath6 from "@/assets/IMG_0902.jpeg.asset.json";
-import exterior from "@/assets/exterior.jpg";
+import terrace1 from "@/assets/IMG_0910.jpeg.asset.json";
+import terrace2 from "@/assets/IMG_0912.jpeg.asset.json";
+import terrace3 from "@/assets/IMG_0913.jpeg.asset.json";
+import terrace4 from "@/assets/IMG_0907.jpeg.asset.json";
+import terrace5 from "@/assets/IMG_0909.jpeg.asset.json";
 import kitchen1 from "@/assets/IMG_0894.jpeg.asset.json";
 import kitchen2 from "@/assets/IMG_0895.jpeg.asset.json";
 import kitchen3 from "@/assets/IMG_0896.jpeg.asset.json";
@@ -47,7 +51,7 @@ const sections = [
     items: ["Lednička s mrazákem", "Myčka nádobí", "Varná deska", "Mikrovlnná trouba"],
   },
   { title: "Koupelna", photos: [bath1.url, bath2.url, bath3.url, bath4.url, bath5.url, bath6.url], items: ["Prostorný sprchový kout", "Toaleta", "Pračka"] },
-  { title: "Terasa a vchod", photos: [exterior], items: ["Posezení", "Soukromé parkoviště zdarma", "Výhled na hory"] },
+  { title: "Terasa a vchod", photos: [terrace1.url, terrace2.url, terrace3.url, terrace4.url, terrace5.url], items: ["Posezení", "Výhled na hory"] },
   { title: "Venku", photos: [] as string[], items: [] as string[] },
 ];
 
