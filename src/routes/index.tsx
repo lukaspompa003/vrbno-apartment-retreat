@@ -6,10 +6,10 @@ import bathroom from "@/assets/bathroom.jpg";
 import exterior from "@/assets/exterior.jpg";
 import kitchen1 from "@/assets/IMG_0894.jpeg.asset.json";
 import kitchen2 from "@/assets/IMG_0895.jpeg.asset.json";
-import kitchen3 from "@/assets/kitchen-cooktop.jpg";
+import kitchen3 from "@/assets/IMG_0896.jpeg.asset.json";
 import kitchen4 from "@/assets/IMG_0897.jpeg.asset.json";
 import kitchen5 from "@/assets/IMG_0898.jpeg.asset.json";
-import kitchen6 from "@/assets/kitchen-sink.jpg";
+import kitchen6 from "@/assets/IMG_0899.jpeg.asset.json";
 import living1 from "@/assets/IMG_0890.jpeg.asset.json";
 import living2 from "@/assets/IMG_0891.jpeg.asset.json";
 import living3 from "@/assets/IMG_0892.jpeg.asset.json";
@@ -38,7 +38,7 @@ const sections = [
   },
   {
     title: "Kuchyň",
-    photos: [kitchen1.url, kitchen2.url, kitchen3, kitchen4.url, kitchen5.url, kitchen6],
+    photos: [kitchen1.url, kitchen2.url, kitchen3.url, kitchen4.url, kitchen5.url, kitchen6.url],
     items: ["Lednička s mrazákem", "Myčka nádobí", "Varná deska", "Mikrovlnná trouba"],
   },
   { title: "Koupelna", photos: [bathroom], items: ["Prostorný sprchový kout", "Toaleta", "Pračka"] },
@@ -64,11 +64,21 @@ const prices = [
 
 function Gallery({ photos, title }: { photos: string[]; title: string }) {
   const [i, setI] = useState(0);
+  const [portrait, setPortrait] = useState(false);
   const go = (d: number) => setI((i + d + photos.length) % photos.length);
   return (
     <div>
       <div className="relative aspect-[3/2] overflow-hidden rounded-sm bg-muted">
-        <img src={photos[i]} alt={`${title} – foto ${i + 1}`} className="h-full w-full object-cover" loading="lazy" />
+        <img
+          src={photos[i]}
+          alt={`${title} – foto ${i + 1}`}
+          className={`h-full w-full ${portrait ? "object-contain" : "object-cover"}`}
+          loading="lazy"
+          onLoad={(e) => {
+            const img = e.currentTarget;
+            setPortrait(img.naturalHeight > img.naturalWidth);
+          }}
+        />
         <button aria-label="Předchozí" onClick={() => go(-1)} className="absolute left-3 top-1/2 -translate-y-1/2 rounded-full bg-overlay p-2 text-on-overlay">
           <ChevronLeft className="h-5 w-5" />
         </button>
