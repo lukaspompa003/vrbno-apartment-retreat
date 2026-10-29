@@ -2,7 +2,12 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { ChevronLeft, ChevronRight, Mail, Phone, MapPin } from "lucide-react";
 import hero from "@/assets/relax-hero.jpeg.asset.json";
-import bathroom from "@/assets/bathroom.jpg";
+import bath1 from "@/assets/IMG_0900.jpeg.asset.json";
+import bath2 from "@/assets/IMG_0901.jpeg.asset.json";
+import bath3 from "@/assets/IMG_0905.jpeg.asset.json";
+import bath4 from "@/assets/IMG_0904.jpeg.asset.json";
+import bath5 from "@/assets/IMG_0906.jpeg.asset.json";
+import bath6 from "@/assets/IMG_0902.jpeg.asset.json";
 import exterior from "@/assets/exterior.jpg";
 import kitchen1 from "@/assets/IMG_0894.jpeg.asset.json";
 import kitchen2 from "@/assets/IMG_0895.jpeg.asset.json";
@@ -41,7 +46,7 @@ const sections = [
     photos: [kitchen1.url, kitchen2.url, kitchen3.url, kitchen4.url, kitchen5.url, kitchen6.url],
     items: ["Lednička s mrazákem", "Myčka nádobí", "Varná deska", "Mikrovlnná trouba"],
   },
-  { title: "Koupelna", photos: [bathroom], items: ["Prostorný sprchový kout", "Toaleta", "Pračka"] },
+  { title: "Koupelna", photos: [bath1.url, bath2.url, bath3.url, bath4.url, bath5.url, bath6.url], items: ["Prostorný sprchový kout", "Toaleta", "Pračka"] },
   { title: "Terasa a vchod", photos: [exterior], items: ["Posezení", "Soukromé parkoviště zdarma", "Výhled na hory"] },
   { title: "Venku", photos: [] as string[], items: [] as string[] },
 ];
