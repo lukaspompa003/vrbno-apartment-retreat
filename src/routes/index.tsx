@@ -38,7 +38,7 @@ const sections = [
   },
   {
     title: "Kuchyň",
-    photos: [kitchen1.url, kitchen2.url, kitchen3.url, kitchen4.url, kitchen5.url, kitchen6.url],
+    photos: [kitchen1.url, kitchen2.url, kitchen3, kitchen4.url, kitchen5.url, kitchen6],
     items: ["Lednička s mrazákem", "Myčka nádobí", "Varná deska", "Mikrovlnná trouba"],
   },
   { title: "Koupelna", photos: [bathroom], items: ["Prostorný sprchový kout", "Toaleta", "Pračka"] },
