@@ -52,7 +52,7 @@ const sections = [
   },
   { title: "Koupelna", photos: [bath1.url, bath2.url, bath3.url, bath4.url, bath5.url, bath6.url], items: ["Prostorný sprchový kout", "Toaleta", "Pračka"] },
   { title: "Terasa a vchod", photos: [terrace1.url, terrace2.url, terrace3.url, terrace4.url, terrace5.url], items: ["Posezení", "Výhled na hory", "Lednice s mrazákem", "Úložný prostor"] },
-  { title: "Venku", photos: [] as string[], items: [] as string[] },
+  { title: "Exteriér a okolí", photos: [] as string[], items: [] as string[] },
 ];
 
 const nearby = [
