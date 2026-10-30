@@ -2,6 +2,15 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { ChevronLeft, ChevronRight, Mail, Phone, MapPin } from "lucide-react";
 import hero from "@/assets/relax-hero.jpeg.asset.json";
+import ext1 from "@/assets/IMG_0915.jpeg.asset.json";
+import ext2 from "@/assets/IMG_0914.jpeg.asset.json";
+import ext3 from "@/assets/IMG_0916.jpeg.asset.json";
+import ext4 from "@/assets/IMG_0917.jpeg.asset.json";
+import ext5 from "@/assets/IMG_0919.jpeg.asset.json";
+import ext6 from "@/assets/IMG_0918.jpeg.asset.json";
+import ext7 from "@/assets/IMG_0921.jpeg.asset.json";
+import ext8 from "@/assets/IMG_0920.jpeg.asset.json";
+import ext9 from "@/assets/IMG_0923.jpeg.asset.json";
 import bath1 from "@/assets/IMG_0900.jpeg.asset.json";
 import bath2 from "@/assets/IMG_0901.jpeg.asset.json";
 import bath3 from "@/assets/IMG_0905.jpeg.asset.json";
@@ -43,7 +52,7 @@ const sections = [
   {
     title: "Obývací pokoj s postelí",
     photos: [hero.url, living1.url, living2.url, living5.url, living4.url, living3.url],
-    items: ["Manželská postel", "Pohovka", "Jídelní stůl", "Wi-Fi zdarma"],
+    items: ["Manželská postel", "Pohovka", "Jídelní stůl"],
   },
   {
     title: "Kuchyň",
@@ -52,7 +61,7 @@ const sections = [
   },
   { title: "Koupelna", photos: [bath1.url, bath2.url, bath3.url, bath4.url, bath5.url, bath6.url], items: ["Prostorný sprchový kout", "Toaleta", "Pračka"] },
   { title: "Terasa a vchod", photos: [terrace1.url, terrace2.url, terrace3.url, terrace4.url, terrace5.url], items: ["Posezení", "Výhled na hory", "Lednice s mrazákem", "Úložný prostor"] },
-  { title: "Exteriér a okolí", photos: [] as string[], items: [] as string[] },
+  { title: "Exteriér a okolí", photos: [ext1, ext2, ext3, ext4, ext5, ext6, ext7, ext8, ext9].map((p) => p.url), items: ["Soukromé parkoviště", "Sklepní sklad"] },
 ];
 
 const nearby = [
