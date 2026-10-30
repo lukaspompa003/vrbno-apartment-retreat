@@ -55,7 +55,7 @@ const sections = [
     items: ["Manželská postel", "Pohovka", "Jídelní stůl"],
   },
   {
-    title: "Kuchyň",
+    title: "Kuchyně",
     photos: [kitchen1.url, kitchen2.url, kitchen3.url, kitchen4.url, kitchen5.url, kitchen6.url],
     items: ["Myčka nádobí", "Varná deska", "Mikrovlnná trouba"],
   },
