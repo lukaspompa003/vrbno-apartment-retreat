@@ -88,6 +88,7 @@ function Gallery({ photos, title }: { photos: string[]; title: string }) {
     <div>
       <div className="relative aspect-[3/2] overflow-hidden rounded-sm bg-muted">
         <img
+          key={photos[i]}
           src={photos[i]}
           alt={`${title} – foto ${i + 1}`}
           className={`h-full w-full ${portrait ? "object-contain" : "object-cover"}`}
