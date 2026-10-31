@@ -121,7 +121,7 @@ function Index() {
   return (
     <main>
       <section className="relative h-[85vh] min-h-[480px]">
-        <img src={hero.url} alt="Apartmán Relax" className="absolute inset-0 h-full w-full object-cover" />
+        <img src={hero.url} alt="Apartmán Nika" className="absolute inset-0 h-full w-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-t from-overlay to-transparent" />
         <div className="relative flex h-full flex-col items-center justify-end pb-16 text-center text-on-overlay">
           <h1 className="text-5xl md:text-7xl">Apartmán Nika</h1>
