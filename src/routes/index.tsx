@@ -140,7 +140,7 @@ function Index() {
           </p>
           <p>
             V přízemí je sklepní dřevěná uzamykatelná kóje – samostatná pro každý apartmán, na uložení lyží nebo
-            kol.
+            horských kol.
           </p>
         </div>
       </section>
