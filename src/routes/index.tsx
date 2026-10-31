@@ -130,12 +130,19 @@ function Index() {
       </section>
 
       <section className="mx-auto max-w-2xl px-6 py-20 text-center">
-        <p className="text-lg leading-relaxed text-muted-foreground">
-          Útulný apartmán ve Vrbně pod Pradědem s výhledem na hory. K dispozici je terasa, Wi-Fi a parkování zdarma,
-          plně vybavená kuchyň a koupelna se sprchou. V obývacím pokoji je rozkládací pohovka, kde může plnohodnotně spát
-          jeden dospělý nebo max 2 menší děti. V přízemí je sklepní dřevěná uzamykatelná kóje – samostatná pro každý
-          apartmán, na uložení lyží nebo horských kol.
-        </p>
+        <div className="space-y-6 text-lg leading-relaxed text-muted-foreground">
+          <p>
+            Útulný apartmán ve Vrbně pod Pradědem s výhledem na hory. K dispozici je terasa, Wi-Fi a parkování zdarma,
+            plně vybavená kuchyň a koupelna se sprchou.
+          </p>
+          <p>
+            V obývacím pokoji je rozkládací pohovka, kde může plnohodnotně spát jeden dospělý nebo max 2 menší děti.
+          </p>
+          <p>
+            V přízemí je sklepní dřevěná uzamykatelná kóje – samostatná pro každý apartmán, na uložení lyží nebo
+            horských kol.
+          </p>
+        </div>
       </section>
 
       <section className="bg-secondary px-6 py-20">
