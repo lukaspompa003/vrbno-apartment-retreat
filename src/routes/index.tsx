@@ -61,7 +61,7 @@ const sections = [
   },
   { title: "Koupelna", photos: [bath1.url, bath2.url, bath3.url, bath4.url, bath5.url, bath6.url], items: ["Prostorný sprchový kout", "Toaleta", "Pračka"] },
   { title: "Terasa a vchod", photos: [terrace1.url, terrace2.url, terrace3.url, terrace4.url, terrace5.url], items: ["Posezení", "Výhled na hory", "Lednice s mrazákem", "Úložný prostor"] },
-  { title: "Exteriér a okolí", photos: [ext2, ext1, ext3, ext4, ext5, ext6, ext7, ext8, ext9].map((p) => p.url), items: ["Soukromé parkoviště", "Uzamykatelná koje"] },
+  { title: "Exteriér a okolí", photos: [ext2, ext1, ext3, ext4, ext5, ext6, ext7, ext8, ext9].map((p) => p.url), items: ["Soukromé parkoviště", "Uzamykatelná kóje"] },
 ];
 
 const nearby = [
