@@ -37,10 +37,10 @@ const living5 = { url: "/images/IMG_0889.jpeg" };
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Apartmán Relax – Vrbno pod Pradědem" },
-      { name: "description", content: "Útulný apartmán pro 2 osoby ve Vrbně pod Pradědem. Wi-Fi, parkování, terasa, výhled na hory." },
-      { property: "og:title", content: "Apartmán Relax – Vrbno pod Pradědem" },
-      { property: "og:description", content: "Útulný apartmán pro 2 osoby v Jeseníkách." },
+      { title: "Apartmán Nika – Vrbno pod Pradědem" },
+      { name: "description", content: "Útulný apartmán pro max 4 osoby ve Vrbně pod Pradědem. Wi-Fi, parkování, terasa, výhled na hory." },
+      { property: "og:title", content: "Apartmán Nika – Vrbno pod Pradědem" },
+      { property: "og:description", content: "Útulný apartmán pro max 4 osoby v Jeseníkách." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
@@ -52,7 +52,7 @@ const sections = [
   {
     title: "Obývací pokoj s postelí",
     photos: [hero.url, living1.url, living2.url, living5.url, living4.url, living3.url],
-    items: ["Manželská postel", "Pohovka", "Jídelní stůl"],
+    items: ["Manželská postel", "Rozkládací pohovka", "Jídelní stůl"],
   },
   {
     title: "Kuchyně",
@@ -61,7 +61,7 @@ const sections = [
   },
   { title: "Koupelna", photos: [bath1.url, bath2.url, bath3.url, bath4.url, bath5.url, bath6.url], items: ["Prostorný sprchový kout", "Toaleta", "Pračka"] },
   { title: "Terasa a vchod", photos: [terrace1.url, terrace2.url, terrace3.url, terrace4.url, terrace5.url], items: ["Posezení", "Výhled na hory", "Lednice s mrazákem", "Úložný prostor"] },
-  { title: "Exteriér a okolí", photos: [ext2, ext1, ext3, ext4, ext5, ext6, ext7, ext8, ext9].map((p) => p.url), items: ["Soukromé parkoviště", "Sklepní sklad"] },
+  { title: "Exteriér a okolí", photos: [ext2, ext1, ext3, ext4, ext5, ext6, ext7, ext8, ext9].map((p) => p.url), items: ["Soukromé parkoviště", "Uzamykatelná koje"] },
 ];
 
 const nearby = [
@@ -75,8 +75,8 @@ const nearby = [
 
 
 const prices = [
-  { season: "Léto", price: "1 900 Kč" },
-  { season: "Zima", price: "1 900 Kč" },
+  { season: "Léto", price: "1 800 Kč" },
+  { season: "Zima", price: "1 800 Kč" },
   { season: "Silvestr", price: "5 000 Kč" },
 ];
 
@@ -121,18 +121,20 @@ function Index() {
   return (
     <main>
       <section className="relative h-[85vh] min-h-[480px]">
-        <img src={hero.url} alt="Apartmán Relax" className="absolute inset-0 h-full w-full object-cover" />
+        <img src={hero.url} alt="Apartmán Nika" className="absolute inset-0 h-full w-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-t from-overlay to-transparent" />
         <div className="relative flex h-full flex-col items-center justify-end pb-16 text-center text-on-overlay">
-          <h1 className="text-5xl md:text-7xl">Apartmán Relax</h1>
-          <p className="mt-3 text-sm uppercase tracking-[0.3em]">2 osoby · 1 manželská postel</p>
+          <h1 className="text-5xl md:text-7xl">Apartmán Nika</h1>
+          <p className="mt-3 text-sm uppercase tracking-[0.3em]">max 4 osoby · 1 manželská postel · 1 rozkládací pohovka</p>
         </div>
       </section>
 
       <section className="mx-auto max-w-2xl px-6 py-20 text-center">
         <p className="text-lg leading-relaxed text-muted-foreground">
           Útulný apartmán ve Vrbně pod Pradědem s výhledem na hory. K dispozici je terasa, Wi-Fi a parkování zdarma,
-          plně vybavená kuchyň a koupelna se sprchou.
+          plně vybavená kuchyň a koupelna se sprchou. V pokoji je rozkládací pohovka, kde může plnohodnotně spát
+          jeden dospělý nebo max 2 menší děti. V přízemí je sklepní dřevěná uzamykatelná kóje – samostatná pro každý
+          apartmán, na uložení lyží nebo horských kol.
         </p>
       </section>
 
@@ -204,7 +206,7 @@ function Index() {
         </div>
       </section>
 
-      <footer className="border-t border-border py-8 text-center text-sm text-muted-foreground">Apartmán Relax · Vrbno pod Pradědem</footer>
+      <footer className="border-t border-border py-8 text-center text-sm text-muted-foreground">Apartmán Nika · Vrbno pod Pradědem</footer>
     </main>
   );
 }
