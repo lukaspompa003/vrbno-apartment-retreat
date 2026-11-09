@@ -40,7 +40,7 @@ export const Route = createFileRoute("/")({
       { title: "Apartmán Nika | Ubytování Vrbno pod Pradědem – Jeseníky" },
       { name: "description", content: "Apartmán Nika ve Vrbně pod Pradědem – ubytování v Jeseníkách pro max 4 osoby. Terasa, Wi-Fi, parkování, blízko Pradědu, Karlovy Studánky a Kopřivné." },
       { name: "keywords", content: "apartmán Nika, apartmán Vrbno, apartmán Vrbno pod Pradědem, ubytování Vrbno pod Pradědem, ubytování Jeseníky, apartmán Praděd, ubytování Karlova Studánka, Kopřivná ubytování" },
-      <meta name="google-site-verification" content="6Wdn9ThR4j1yKI-8GyoxPFnu3K0WVXl6vjaqgZ4OZlw" />,
+      { name: "google-site-verification", content: "6Wdn9ThR4j1yKI-8GyoxPFnu3K0WVXl6vjaqgZ4OZlw" },
       { property: "og:title", content: "Apartmán Nika | Ubytování Vrbno pod Pradědem" },
       { property: "og:description", content: "Útulný apartmán pro max 4 osoby ve Vrbně pod Pradědem v Jeseníkách." },
       { property: "og:type", content: "website" },
