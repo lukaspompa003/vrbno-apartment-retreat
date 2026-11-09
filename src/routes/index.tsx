@@ -44,11 +44,11 @@ export const Route = createFileRoute("/")({
       { property: "og:title", content: "Apartmán Nika | Ubytování Vrbno pod Pradědem" },
       { property: "og:description", content: "Útulný apartmán pro max 4 osoby ve Vrbně pod Pradědem v Jeseníkách." },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "https://vrbno-apartment-retreat.lovable.app/" },
+      { property: "og:url", content: "https://nika-apartman.vrbno.workers.dev/" },
       { property: "og:locale", content: "cs_CZ" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "https://vrbno-apartment-retreat.lovable.app/" }],
+    links: [{ rel: "canonical", href: "https://nika-apartman.vrbno.workers.dev/" }],
     scripts: [
       {
         type: "application/ld+json",
