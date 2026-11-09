@@ -57,8 +57,8 @@ export const Route = createFileRoute("/")({
           "@type": "LodgingBusiness",
           name: "Apartmán Nika",
           description: "Apartmán pro max 4 osoby ve Vrbně pod Pradědem v Jeseníkách.",
-          url: "https://vrbno-apartment-retreat.lovable.app/",
-          image: "https://vrbno-apartment-retreat.lovable.app/images/relax-hero.jpeg",
+          url: "https://nika-apartman.vrbno.workers.dev/",⁠
+          image: "https://nika-apartman.vrbno.workers.dev/images/relax-hero.jpeg",
           telephone: "+420603307568",
           email: "barinovamonika35@seznam.cz",
           priceRange: "1 800 – 5 000 Kč / noc",
